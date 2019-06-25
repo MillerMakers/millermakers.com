@@ -1,13 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light py-3">
-  <a class="navbar-brand ml-3 ml-md-auto" [routerLink]="['/']">
+  <a class="navbar-brand ml-3 ml-md-0" [routerLink]="['/']">
     <img src="../../../assets/images/logo.png">
   </a>
 
   <button class="btn-toggle d-lg-none" type="button" (click)="toggle()">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <!-- [@expand]="open" -->
 
   <div [ngClass]="{ 'show': open }" class="collapse navbar-collapse ml-auto navbar-nav justify-content-end">
     <div class="navbar-nav text-uppercase text-center">
