@@ -12,7 +12,7 @@
     "verify": "superstatic --compression --config superstatic.json ./dist",
     "analyze": "webpack-bundle-analyzer ./dist/stats.json",
     "deploy": "aws s3 sync dist  s3://millermakers.com --profile PERSONAL_MM --delete && npm run invalidate",
-    "invalidate": "aws cloudfront --profile PERSONAL_MM create-invalidation --distribution-id E26RN2GSM20KG1 --paths '/**/*'"
+    "invalidate": "aws cloudfront --profile PERSONAL_MM create-invalidation --distribution-id E26RN2GSM20KG1 --paths '/index.html'"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +47,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "imageoptim-cli": "^2.3.6",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
@@ -56,6 +57,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
     "superstatic": "^6.0.3",
+    "tinypng-cli": "0.0.7",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.4.1",

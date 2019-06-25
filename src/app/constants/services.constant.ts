@@ -1,4 +1,5 @@
 
+
 export interface IItem {
     title?: string;
     content: string;
@@ -9,15 +10,12 @@ export interface IService {
     title: string;
     description: string;
     lead: string;
-
-    // CSS Reference for BannerImage Positioning
-    // banner-<id>
-    banner: string;
-
     // Service Images
     thumbnail: string;
-    bannerImage: string;
-    images?: string[];
+    images: {
+        src: string;
+        shoutout?: string;
+    }[];
 
     // Service Item Breakdown
     itemHeader: string;
@@ -30,14 +28,26 @@ export const SERVICES = {
         title: 'day of design',
         description: 'The day of your wedding will be your most memorable day yet, the details should be too.',
         lead: 'Go ahead, take a peek!',
-        thumbnail: './../../assets/images/banners/banner-2.jpg',
-        bannerImage: './../../assets/images/banners/banner-5.jpg',
-        banner: 'banner-5',
+        thumbnail: './../../assets/images/services/dayof/dayof-justicephoto.jpg',
+        shoutoutLink: 'https://instagram.com/justicephoto',
+        shoutout: '@justicephoto',
         images: [
-            './../../assets/images/services/dayof/dayof-1.jpg',
-            './../../assets/images/services/dayof/dayof-2.jpg',
-            './../../assets/images/services/dayof/dayof-3.jpg',
-            './../../assets/images/services/dayof/dayof-4.jpg'
+            {
+                src: './../../assets/images/services/dayof/dayof-justicephoto.jpg',
+                shoutout: '@justicephoto',
+            },
+            {
+                src: './../../assets/images/services/dayof/dayof-1.jpg'
+            },
+            {
+                src: './../../assets/images/services/dayof/dayof-2.jpg'
+            },
+            {
+                src: './../../assets/images/services/dayof/dayof-3.jpg'
+            },
+            {
+                src: './../../assets/images/services/dayof/dayof-4.jpg'
+            }            
         ],
         itemHeader: 'Just a handful of day of services',
         items: [
@@ -63,19 +73,31 @@ export const SERVICES = {
             }
         ]
     },
-    SIGNAGE: {
-        slug: 'signage',
-        title: 'Signage',
-        description: 'Welcome your guests with a one of a kind hand-made wooden sign, tailored to your style.',
+    SUITES: {
+        slug: 'suites',
+        title: 'Suites',
+        description: 'Work together with me to design your dream invitations for your event.',
         lead: 'Browse our past projects!',
-        thumbnail: './../../assets/images/banners/banner-4.jpg',
-        bannerImage: './../../assets/images/banners/banner-10.jpg',
-        banner: 'banner-10',
+        thumbnail: './../../assets/images/services/suites/suite-stormy-peterson.jpg',
+        shoutoutLink: 'https://instagram.com/stormypetersonphotography',
+        shoutout: '@stormypetersonphotography',
         images: [
-            './../../assets/images/services/signage/signage-1.jpg',
-            './../../assets/images/services/signage/signage-2.jpg',
-            './../../assets/images/services/signage/signage-3.jpg',
-            './../../assets/images/services/signage/signage-4.jpg'
+            {
+                src: './../../assets/images/services/suites/suite-stormy-peterson.jpg',
+                shoutout: '@stormypetersonphotography',
+            },
+            {
+                src: './../../assets/images/services/suites/suite-1.jpg'
+            },
+            {
+                src: './../../assets/images/services/suites/suite-1.jpg'
+            },
+            {
+                src: './../../assets/images/services/suites/suite-1.jpg'
+            },
+            {
+                src: './../../assets/images/services/suites/suite-1.jpg'
+            }
         ],
         itemHeader: '',
 
@@ -107,15 +129,29 @@ export const SERVICES = {
         title: 'Envelopes',
         description: 'Invitations aren\'t the only thing that should claim beauty.',
         lead: 'Take a look at some examples!',
-        thumbnail: './../../assets/images/banners/banner-3.jpg',
-        bannerImage: './../../assets/images/banners/banner-11.jpg',
-        banner: 'banner-11',
+        thumbnail: './../../assets/images/services/envelopes/envelope-erinkelli.jpg',
+        shoutoutLink: 'https://instagram.com/erinkelliphotography',
+        shoutout: '@erinkelliphotography',
         images: [
-            './../../assets/images/services/envelopes/envelope-1.jpg',
-            './../../assets/images/services/envelopes/envelope-2.jpg',
-            './../../assets/images/services/envelopes/envelope-3.jpg',
-            './../../assets/images/services/envelopes/envelope-4.jpg',
-            './../../assets/images/services/envelopes/envelope-5.jpg'
+            {
+                src: './../../assets/images/services/envelopes/envelope-erinkelli.jpg',
+                shoutout: '@erinkelliphotography'
+            },
+            {
+                src: './../../assets/images/services/envelopes/envelope-1.jpg'
+            },
+            {
+                src: './../../assets/images/services/envelopes/envelope-2.jpg'
+            },
+            {
+                src: './../../assets/images/services/envelopes/envelope-3.jpg'
+            },
+            {
+                src: './../../assets/images/services/envelopes/envelope-4.jpg'
+            },
+            {
+                src: './../../assets/images/services/envelopes/envelope-5.jpg'
+            }
         ],
         itemHeader: 'Whoever said “don’t judge a book by its cover,” never met an envelope!',
         items: [
@@ -127,7 +163,7 @@ export const SERVICES = {
 };
 
 export default [
+    SERVICES.SUITES,
     SERVICES.DAY_OF_DESIGN,
-    SERVICES.SIGNAGE,
     SERVICES.ENVELOPES
 ];

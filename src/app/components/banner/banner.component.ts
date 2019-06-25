@@ -8,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BannerComponent {
   @Input() header;
   @Input() subheader;
-  @Input() image = '../../assets/images/white-1714170.jpg';
+  @Input() image;
   @Input() banner?;
+  @Input() opacity = 1;
   @Input() overlay = true;
 }

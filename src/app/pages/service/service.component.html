@@ -1,21 +1,18 @@
 <div>
-  <app-banner 
-    [header]="service.title" 
-    [subheader]="service.description"
-    [banner]="service.banner"
-    [image]="service.bannerImage"
-  ></app-banner>
-
-  <div class="row text-center my-5">
+  <div class="row text-center mt-2 mb-5">
     <div class="container m-auto">
       <ng-container *ngIf="service.images">
-        <div class="my-5">
-          <h3 class="text-capitalize">{{service.lead}}</h3>
+        <div class="my-5 text-center">
+          <h3 class="text-capitalize">{{service.title}}</h3>
+          <p>{{service.description}}</p>
         </div>
       
-        <div class="row"gallerize>
-          <ng-container *ngFor="let srcPath of service.images; let ix = index">
-            <img [ngClass]="ix > 2 ? 'd-none' : ''" class="col-sm-12 col-md-6 col-lg-4" src="{{srcPath}}">
+        <div class="row" gallerize>
+          <ng-container *ngFor="let image of service.images; let ix = index">
+            <div class="col-sm-12 col-md-6 col-lg-4 pb-3 px-2 position-relative">
+              <img class="w-100" src="{{image.src}}">
+              <p  *ngIf="image.shoutout" class="shoutout">{{image.shoutout}}</p>  
+            </div>
           </ng-container>
         </div>
       </ng-container>
@@ -29,7 +26,7 @@
           <!-- ADD TRACK BY -->
           <ng-container *ngFor="let item of service.items">
             <span *ngIf="item.title" class="h5 font-weight-bold">{{item.title}}</span>
-            <p class="">{{item.content}}</p>
+            <p>{{item.content}}</p>
           </ng-container>
           <a class="btn btn-outline-primary mt-5 mb-4" [routerLink]="['/inquire']">Inquire Now!</a>
         </div>

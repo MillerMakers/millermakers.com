@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
 
   public services = [
     { id: 'dayof', name: 'Day Of' },
-    { id: 'signage', name: 'Signage' },
+    { id: 'suites', name: 'Suites' },
     { id: 'envelopes', name: 'Envelopes' },
     { id: 'custom', name: 'Custom' }
   ];

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '../../../../node_modules/@angular/router';
-
+import { ActivatedRoute } from '@angular/router';
 import services, { IService } from './../../constants/services.constant';
 
 @Component({
@@ -23,7 +22,7 @@ export class ServiceComponent implements OnInit {
     );
   }
 
-  private findServiceBySlug(collection: IService[], slug: string) {
+  private findServiceBySlug(collection: IService[], slug: string): IService {
     const filtered = services.filter((s: IService) => {
       return s.slug && s.slug === slug;
     });

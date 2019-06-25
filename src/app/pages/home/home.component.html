@@ -6,6 +6,7 @@
           [overlay]="false" 
           image="../../assets/images/banners/banner-0.jpg"
           banner="banner-0"
+          opacity="0.8"
         ></app-banner>    
         </div>
       </div>
@@ -16,6 +17,11 @@
       <ng-container *ngFor="let service of services;">
         <div class="col-12 col-sm-4 mb-4 service px-1">
           <div class="hover-wrapper">
+            <div *ngIf="service.shoutout" class="shoutout">
+              <a [href]="service.shoutoutLink" target="_blank">
+                {{service.shoutout}}
+              </a>
+            </div>
             <img class="mb-2 pointer" [src]="service.thumbnail" [routerLink]="['services', service.slug]"/>
           </div>
           <h5 class="my-3 text-uppercase pointer text-right font-weight-bold " [routerLink]="['services', service.slug]">{{service.title}}</h5>
@@ -44,7 +50,7 @@
         <img class="meet-img round-50" src="../../assets/images/lauren.jpg">
       </div>
       <div class="col-12 col-sm-9 text-center mt-3 mt-md-0">
-        <h1>Hey, there! I'm Lauren Miller,</h1>
+        <h1>Hey, there! I'm Lauren,</h1>
         <p class="intro font-weight-lighter mx-md-5 h4 mb-4">
           the calligrapher and designer behind Miller Makers. I’m honored you have taken the time to learn a little about me and what I love to do!
         </p>
