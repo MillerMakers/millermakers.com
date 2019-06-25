@@ -23,9 +23,6 @@ img {
     
     @include media-breakpoint-down(sm) {
         max-height: 270px;
-
-        // @media screen and (orientation: landscape) {
-        // }
     }
 }
 

@@ -1,26 +1,28 @@
 <div class="">
-  <app-banner 
-    [overlay]="false" 
-    image="../../assets/images/banners/banner-0.jpg"
-    banner="banner-0"
-  ></app-banner>
+  <div class="container px-2 px-sm-0">
+    <div class="row">
+      <div class="col-12 px-1">
+        <app-banner 
+          [overlay]="false" 
+          image="../../assets/images/banners/banner-0.jpg"
+          banner="banner-0"
+        ></app-banner>    
+        </div>
+      </div>
+  </div>
 
-  <div class="container mb-5">
-    <div class="row p-4 p-md-5 text-center">
-      <section id="services" class="px-md-5 py-md-4 py-lg-4 px-lg-4 mx-auto">
-        <h2 #typer class="d-inline typer">{{headers[0]}}</h2>
-      </section>        
-    </div>
-
-    <div class="row services text-center">
+  <div class="services-offered container mb-5 mx-auto px-2 px-md-0">
+    <div class="row services text-center mt-2">
       <ng-container *ngFor="let service of services;">
-        <div class="col-12 col-sm-4 mb-4 service">
+        <div class="col-12 col-sm-4 mb-4 service px-1">
           <div class="hover-wrapper">
             <img class="mb-2 pointer" [src]="service.thumbnail" [routerLink]="['services', service.slug]"/>
           </div>
-          <h5 class="my-3 text-capitalize pointer" [routerLink]="['services', service.slug]">{{service.title}}</h5>
-          <p class="font-weight-lighter">{{service.description}}</p>
-          <a class="btn btn-outline-primary" [routerLink]="['/inquire']">Inquire</a>
+          <h5 class="my-3 text-uppercase pointer text-right font-weight-bold " [routerLink]="['services', service.slug]">{{service.title}}</h5>
+          <p class="font-weight-lighter text-right">{{service.description}}</p>
+          <div class="text-right">
+            <a class="btn btn-outline-primary" [routerLink]="['/inquire']">Inquire</a>
+          </div>
         </div>      
       </ng-container>
 

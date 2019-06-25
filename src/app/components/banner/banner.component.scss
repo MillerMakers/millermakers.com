@@ -1,7 +1,5 @@
 @import "~bootstrap/scss/bootstrap-grid.scss";
 
-
-
 .banner {
 
     position: relative;
@@ -25,9 +23,7 @@
         top: 0;
         left: 0;
         bottom: 0;
-        right: 0;
-        // animation: feature-bg-anim .6s ease-in-out;
-    
+        right: 0;    
         img {
             position: relative;
             border: 0;
@@ -36,7 +32,6 @@
     }
 
     .content {
-        // animation: feature-text-anim .75s ease-in-out;
         z-index: 100;
         position: relative;
         width: 100%;

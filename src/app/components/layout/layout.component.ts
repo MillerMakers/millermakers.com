@@ -3,7 +3,6 @@ import { DOCUMENT } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
@@ -12,7 +11,7 @@ import { filter } from 'rxjs/operators';
 export class LayoutComponent implements OnInit, OnDestroy {
   private _routerSubscription: Subscription;
 
-  @ViewChild('header', {read: ElementRef}) private header: ElementRef;
+  @ViewChild('header', { read: ElementRef, static: true }) private header: ElementRef;
 
   constructor(
     private router: Router,
