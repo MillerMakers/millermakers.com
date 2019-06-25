@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "verify": "superstatic --compression --config superstatic.json ./dist/millermakers",
+    "verify": "superstatic --compression --config superstatic.json ./dist",
     "analyze": "webpack-bundle-analyzer ./dist/stats.json",
     "deploy": "aws s3 sync dist  s3://millermakers.com --profile PERSONAL_MM --delete && npm run invalidate",
     "invalidate": "aws cloudfront --profile PERSONAL_MM create-invalidation --distribution-id E26RN2GSM20KG1 --paths '/**/*'"
