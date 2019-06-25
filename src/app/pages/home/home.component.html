@@ -1,0 +1,54 @@
+<div class="">
+  <app-banner 
+    [overlay]="false" 
+    image="../../assets/images/banners/banner-0.jpg"
+    banner="banner-0"
+  ></app-banner>
+
+  <div class="container mb-5">
+    <div class="row p-4 p-md-5 text-center">
+      <section id="services" class="px-md-5 py-md-4 py-lg-4 px-lg-4 mx-auto">
+        <h2 #typer class="d-inline typer">{{headers[0]}}</h2>
+      </section>        
+    </div>
+
+    <div class="row services text-center">
+      <ng-container *ngFor="let service of services;">
+        <div class="col-12 col-sm-4 mb-4 service">
+          <div class="hover-wrapper">
+            <img class="mb-2 pointer" [src]="service.thumbnail" [routerLink]="['services', service.slug]"/>
+          </div>
+          <h5 class="my-3 text-capitalize pointer" [routerLink]="['services', service.slug]">{{service.title}}</h5>
+          <p class="font-weight-lighter">{{service.description}}</p>
+          <a class="btn btn-outline-primary" [routerLink]="['/inquire']">Inquire</a>
+        </div>      
+      </ng-container>
+
+      <hr class="col-12 py-3">
+
+      <div class="row text-center bg-light">
+        <h4 class="col-12 col-lg-8 m-auto my-2 font-weight-lighter py-4">
+          Here at Miller Makers we are committed to making sure the small details shine through. Whether you want elements for the day of your event, or want your guests to receive elegantly addressed envelopes, we’ve got you covered!
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mt-5 py-3">
+
+  <div class="container">
+    <div class="row mb-5 mx-auto">
+      <div class="col-12 col-sm-3 text-center">
+        <img class="meet-img round-50" src="../../assets/images/lauren.jpg">
+      </div>
+      <div class="col-12 col-sm-9 text-center mt-3 mt-md-0">
+        <h1>Hey, there! I'm Lauren Miller,</h1>
+        <p class="intro font-weight-lighter mx-md-5 h4 mb-4">
+          the calligrapher and designer behind Miller Makers. I’m honored you have taken the time to learn a little about me and what I love to do!
+        </p>
+        <button class="btn btn-primary" [routerLink]="['/meet']">Learn More</button>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,68 @@
+@import "variables.scss";
+@import "typography.scss";
+@import "banners.scss";
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+$theme-colors: map-remove($theme-colors, "info", "dark", "warning");
+
+// Optional
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/utilities";
+
+
+.btn {
+    padding: 0.5rem 3rem !important;
+
+    &.btn-outline-primary {
+        &:hover {
+            color: $white !important;
+        }
+    }
+}
+
+.typed-cursor {
+    margin-left: 5px;
+    font-size: 1.4rem;
+    // font-size: 2rem;
+}
+
+.typer {
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.5rem;
+    }
+
+    span {
+        transition: opacity 500ms ease-out;
+        opacity: 1;
+    }
+    
+    &.complete + span {
+        opacity: 0;
+    }    
+}
+
+.dim {
+    opacity: 0.5;
+}
+
+.dimmer {
+    opacity: 0.2;
+}
+
+.round-50 {
+    border-radius: 50%!important;
+}

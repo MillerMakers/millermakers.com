@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img src="../../../assets/images/logo.png">
+  </a>
+
+  <button class="btn-toggle d-lg-none" type="button" (click)="toggle()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- [@expand]="open" -->
+
+  <div [ngClass]="{ 'show': open }" class="collapse navbar-collapse ml-auto navbar-nav justify-content-end">
+    <div class="navbar-nav text-uppercase text-center">
+      <a class="nav-item nav-link mx-1" routerLinkActive="text-primary" [routerLink]="['/meet']">
+          Meet the maker
+      </a>
+
+      <a class="nav-item nav-link mx-1" routerLinkActive="text-primary" [routerLink]="['/']" fragment="services">
+          Services
+      </a>
+
+      <a class="nav-item nav-link mx-1" routerLinkActive="text-primary" [routerLink]="['/process']">
+        Process
+      </a>
+
+      <a class="nav-item nav-link btn text-primary btn-outline-primary mx-1 mb-2" [routerLink]="['/inquire']">
+          Let’s get in touch
+      </a>
+
+      <a class="insta" href="//instagram.com/millermakers" target="_BLANK">
+        <img class="ml-2 dimmer pointer" src="../../../assets/images/insta.png" width="32" height="32"/>
+      </a>
+    </div>
+  </div>
+</nav>

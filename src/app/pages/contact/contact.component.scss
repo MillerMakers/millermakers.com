@@ -1,0 +1,14 @@
+.contact-form {
+    max-width: 800px;
+    margin: auto;
+
+    .step {
+        border-bottom: 1px solid;
+    }
+
+    textarea {
+        resize: vertical;
+        max-height: 400px;
+        min-height: 100px;
+    }
+}

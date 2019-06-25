@@ -1,0 +1,245 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
+.banner-img {
+    position: relative;
+    border: 0;
+    transition: top 200ms;
+
+    &.banner-0 {
+
+        // Hackity Hack (need to fix 5k banner
+        @media (min-width: 2000px) { 
+            top: -1100px;
+            left: -400px;
+            height: 2500px;
+        }        
+
+        @include media-breakpoint-down(xl) {
+            top: -600px;
+            left: -250px;
+            height: 1500px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            top: -450px;
+            left: -300px;
+            height: 1100px;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            top: -350px;
+            left: -200px;
+            height: 1000px;
+        }
+
+
+        @include media-breakpoint-down(sm) {
+            top: -200px;
+            left: -150px;
+            height: 600px;
+
+            // @media screen and (orientation: landscape) {
+            //     top: -200px;
+            //     left: -150px;
+            //     height: 600px;
+            // }
+        }
+    }
+
+
+    &.banner-1 {
+        @include media-breakpoint-down(xl) {
+            top: -1250px;
+            left: -150px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            top: -1250px;
+            left: -600px;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            top: -1250px;
+            left: -800px;
+        }
+
+
+        @include media-breakpoint-down(sm) {
+            top: -850px;
+            left: -750px;
+            height: 1800px;
+        }    
+    }
+
+    &.banner-3 {
+        @include media-breakpoint-down(xl) {
+            top: -600px;
+            left: -0px;
+            height: 1500px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            top: -370px;
+            left: 0px;
+            height: 1050px;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            top: -270px;
+            left: 0;
+            height: 900px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            top: -00px;
+            left: -150px;
+            height: 550px;
+
+            @media screen and (orientation: landscape) {
+                top: -200px;
+                left: -150px;
+                height: 700px;
+            }
+        }
+    }
+
+    &.banner-4 {
+        @include media-breakpoint-down(xl) {
+            top: -600px;
+            left: -0px;
+            height: 1500px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            top: -370px;
+            left: 0px;
+            height: 1050px;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            top: -270px;
+            left: 0;
+            height: 900px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            top: -00px;
+            left: -150px;
+            height: 550px;
+
+            @media screen and (orientation: landscape) {
+                top: -200px;
+                left: -150px;
+                height: 700px;
+            }
+        }
+    }
+
+
+    &.banner-5 {
+        @include media-breakpoint-down(xl) {
+            top: -570px;
+            left: -200px;
+            height: 1500px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            top: -300px;
+            left: -200px;
+            height: 1000px;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            top: -300px;
+            left: -200px;
+            height: 1000px;
+        }
+
+
+        @include media-breakpoint-down(sm) {
+            top: -00px;
+            left: -150px;
+            height: 550px;
+
+            @media screen and (orientation: landscape) {
+                top: -200px;
+                left: -150px;
+                height: 700px;
+            }
+        }
+    }
+
+
+    &.banner-7 {
+        @include media-breakpoint-down(xl) {
+            top: -570px;
+            left: -200px;
+            height: 1500px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            top: -300px;
+            left: -200px;
+            height: 1000px;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            top: -300px;
+            left: -200px;
+            height: 1000px;
+        }
+
+
+        @include media-breakpoint-down(sm) {
+            top: -50px;
+            left: -150px;
+            height: 450px;
+            
+            @media screen and (orientation: landscape) {
+                top: -200px;
+                left: -150px;
+                height: 700px;
+            }
+        }
+    }
+
+    &.banner-10, &.banner-11 {
+        @include media-breakpoint-down(xl) {
+            top: -370px;
+            left: -200px;
+            height: 1500px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            top: -170px;
+            left: -190px;
+            height: 1000px;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            top: -200px;
+            left: -200px;
+            height: 1000px;
+        }
+
+
+        @include media-breakpoint-down(sm) {
+            top: 0;
+            left: -150px;
+            height: 600px;
+
+            @media screen and (orientation: landscape) {
+                top: -200px;
+                left: -150px;
+                height: 700px;
+            }
+        }
+    }
+}

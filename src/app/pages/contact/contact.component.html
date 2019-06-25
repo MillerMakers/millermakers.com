@@ -1,0 +1,75 @@
+<div>
+  <app-banner 
+    header="Let's get in touch" 
+    subheader="Contact us to work through the details!"
+    image="../../assets/images/banners/banner-6.jpg"    
+  ></app-banner>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center my-4">
+        <form class="contact-form" [formGroup]="contactForm" novalidate>
+          <section class="py-md-4 py-lg-5">
+            <p class="step mb-4 d-inline-block">Step 1</p>
+            <p class="text-uppercase h4 mb-4">Select One or More</p>
+
+            <div class="row">
+              <ng-container *ngFor="let service of services; let ix = index">
+                <label formArrayName="services" class="col-12 col-sm-6">
+                  <input class="d-none" type="checkbox" [formControlName]="ix" value="dayof"/>
+                  <span [ngClass]="serviceSelected(ix) ? 'btn-primary': 'btn-outline-primary'" class="btn w-100">{{services[ix].name}}</span>
+                </label>      
+              </ng-container>
+            </div>
+          </section>
+
+          <hr>
+
+          <section class="py-md-4 py-lg-5">
+            <p class="step mb-4 d-inline-block">Step 2</p>
+            <p class="text-uppercase h4 mb-4">Tell us who you are</p>
+            
+            <div class="row">
+              <div class="form-group mb-2 col-12 col-sm-6">
+                <label for="name" class="sr-only">Name</label>
+                <input type="text" [ngClass]="hasError('name') ? 'border-danger': ''" class="form-control" formControlName="name" id="name" placeholder="Name">
+                <div class="text-danger text-left mt-1" *ngIf="hasError('name', 'required')">
+                  Your Name is required.
+                </div>
+              </div>
+  
+              <div class="form-group mb-2 col-12 col-sm-6">
+                <label for="email" class="sr-only">Name</label>
+                <input type="email" [ngClass]="hasError('email') ? 'border-danger': ''" class="form-control" formControlName="email" id="email" placeholder="Email">
+                <div class="text-danger text-left mt-1" *ngIf="hasError('email', 'required')">
+                  Your Email is required.
+                </div>
+                <div class="text-danger text-left mt-1" *ngIf="hasError('email', 'email')">
+                  Please enter a valid email.
+                </div>
+              </div>      
+
+              <div class="form-group mb-2 col-12">
+                <label for="message" class="sr-only">Name</label>
+                <textarea class="form-control" formControlName="message" placeholder="Custom Message" rows="5"></textarea>
+              </div>      
+            </div>
+          </section>
+
+          <hr>
+
+          <section class="py-md-4 py-lg-5">
+            <p class="step mb-4 d-inline-block">Step 3</p>
+            <button class="d-block btn btn-primary m-auto" type="button" (click)="submitInquiry($event)">
+              Send Inquiry
+            </button>
+
+            <p *ngIf="successFlag" class="pt-4 text-center text-success">
+              Thank you for inquiring, we will be in contact within 48 hours.
+            </p>
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
